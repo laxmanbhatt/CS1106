@@ -1,0 +1,10 @@
+sudo mount -b /dev/sda1
+mkdir /tmp/Backup
+cp *.c /tmp/backup
+cp *.py /tmp/backup
+cd /tmp
+tar -czvf Backup-2025-03-28 Backup
+udiskclt mount -b /dev/sda1
+mv /tmp/Backup-2025-03-28.tar.gz /media/RVU/Pendrive
+udiskclt unmount -b /dev/sda1
+rm -r /tmp/Backup
